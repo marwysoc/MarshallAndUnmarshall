@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<badanie oddzial="Oddział okulistyczny" ksiega_gl="R17-002" ksiega_oddzialu="Oku-11/R17">
+    <pacjent pesel="75060605612">
+        <nazwisko>Jonderko</nazwisko>
+        <imie>Magdalena</imie>
+        <imie>Maria</imie>
+        <imie>Anna</imie>
+        <plec>K</plec>
+    </pacjent>
+    <wywiad_wstepny>
+        <gl_skargi>Częste bóle głowy w okolicach skroni, ciemne plamki w polu widzenie</gl_skargi>
+    </wywiad_wstepny>
+    <leki>
+        <lek nazwa_leku="Witamin Mix">
+            <dawka>30.0</dawka>
+            <okres_poczatek>2017-05-09</okres_poczatek>
+            <okres_koniec>2017-01-02</okres_koniec>
+            <uwagi>dawka - jedna tabletka, raz dziennie, wieczorem, brany aktualnie</uwagi>
+        </lek>
+    </leki>
+    <dolegliwosci>
+        <uklad_oddechowy></uklad_oddechowy>
+        <uklad_krazenia>wysokie ciśnienie</uklad_krazenia>
+        <uklad_trawienny></uklad_trawienny>
+    </dolegliwosci>
+    <opis>Siatkówka dobrze przylegająca do dna oka. Brak wady wzroku. Oko Lewe: wysokie ciśnienie, stan lekko zapalny. Przepisano maść Lowpres (na noc) w celu obniżenia ciśnienia. Wizyta kontrolna za mesiąc.</opis>
+</badanie>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+
+	<xs:annotation>
+		<xs:documentation xml:lang="pl"> XML Schema do pliku badaniePodmiotoweOgolne. Projekt: Dokumenty Cyfrowe w Medycynie, 2017 </xs:documentation>
+	</xs:annotation>
+	
+	<xs:element name="badanie" type="Badanie"/>
+	<xs:element name="pacjent" type="Pacjent"/>
+	<xs:element name="wywiad_wstepny" type="Wywiad"/>
+	<xs:element name="leki" type="Leki"/>
+	<xs:element name="dolegliwosci" type="Dolegliwosci"/>
+	<xs:element name="opis" type="Opis"/>
+	
+	<xs:complexType name="Badanie">
+		<xs:sequence>
+			<xs:element ref="pacjent" minOccurs="1"/>
+			<xs:element ref="wywiad_wstepny" minOccurs="0"/>
+			<xs:element ref="leki" minOccurs="0"/>
+			<xs:element ref="dolegliwosci" minOccurs="0"/>
+			<xs:element ref="opis" minOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="oddzial" type="xs:string" use="required"/>
+		<xs:attribute name="ksiega_gl" type="ksiega_gl_type" use="required"/>
+		<xs:attribute name="ksiega_oddzialu" type="ksiega_oddzialu_type" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="Pacjent">
+		<xs:sequence>
+			<xs:element name="nazwisko" type="Nazwisko" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="imie" type="Imiona" minOccurs="1" maxOccurs="3"/>
+			<xs:element name="plec" type="Plec"/>
+		</xs:sequence>
+		<xs:attribute name="pesel" type="Pesel" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="Wywiad">
+		<xs:sequence>
+			<xs:element name="gl_skargi" type="gl_skargi_type" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="dotychczasowy_przebieg" type="dotychczasowy_przebieg_type" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="przebyte_choroby" type="przebyte_choroby_type" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Leki">
+		<xs:sequence>
+			<xs:element name="lek" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="dawka" type="dawka_type" minOccurs="0"/>
+						<xs:element name="okres_poczatek" type="xs:date" minOccurs="0"/>
+						<xs:element name="okres_koniec" type="xs:date" minOccurs="0"/>
+						<xs:element name="uwagi" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="nazwa_leku" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Dolegliwosci">
+		<xs:sequence>
+			<xs:element name="uklad_oddechowy" type="xs:string" minOccurs="0"/>
+			<xs:element name="uklad_krazenia" type="xs:string" minOccurs="0"/>
+			<xs:element name="uklad_trawienny" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="Opis">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="4"/>
+			<xs:maxLength value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="dawka_type">
+      <xs:restriction base="xs:decimal">
+         <xs:minInclusive value="0"/>
+      </xs:restriction>
+   </xs:simpleType>
+	
+	<xs:simpleType name="Nazwisko">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]([a-z])*"/>
+			<xs:minLength value="3"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Imiona">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]([a-z])*"/>
+			<xs:minLength value="3"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ksiega_gl_type">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[R]\d{2}-\d{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ksiega_oddzialu_type">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z]{3}-\d{2}/[R]\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Pesel">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{2}[0-1]{1}[0-9]{1}[0-3]{1}[0-9]{1}[0-9]{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="gl_skargi_type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="4"/>
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dotychczasowy_przebieg_type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="4"/>
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="przebyte_choroby_type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="4"/>
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Plec">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="M"/>
+			<xs:enumeration value="K"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE badanie>
+<badanie oddzial="Oddział endokrynologii" ksiega_gl="R13-243" ksiega_oddzialu="End-19/R13">
+    
+    <pacjent pesel="89052104965">
+        <nazwisko>Kowalska</nazwisko>
+        <imie>Anna</imie>
+		<imie>Karolina</imie>
+        <plec>K</plec>
+    </pacjent>
+   
+   	<wywiad_wstepny>
+   		<gl_skargi>bezsenność, ciągłe zmęczenie, nadmierna potliwość</gl_skargi>
+    	<dotychczasowy_przebieg>częste alergie skórne</dotychczasowy_przebieg>
+    	<przebyte_choroby>grypa, ospa, różyczka</przebyte_choroby>
+   	</wywiad_wstepny>
+    
+    <leki>
+        <lek nazwa_leku="Euthyrox N50">
+            <dawka>50.0</dawka>
+            <okres_poczatek>2012-05-21</okres_poczatek>
+			<okres_koniec>2013-12-20</okres_koniec>
+            <uwagi>dawka - jedna tabletka, raz dziennie, rano, 30min przed posiłkiem</uwagi>
+        </lek>
+        <lek nazwa_leku="Euthyrox N75">
+            <dawka>75.0</dawka>
+            <okres_poczatek>2013-12-21</okres_poczatek>
+            <uwagi>dawka - jedna tabletka (tak samo jak N50); lek przyjmowany aktualnie </uwagi>
+        </lek>
+    </leki>
+    
+    <dolegliwosci>
+    	<uklad_oddechowy>trudności w oddychaniu podczas wysiłku fizycznego (duszność wysiłkowa)</uklad_oddechowy>
+    	<uklad_krazenia>problemy z krążeniem (zimne dłonie, stopy, przedramiona itp)</uklad_krazenia>
+    	<uklad_trawienny>trudności z trawieniem tłustych posiłków</uklad_trawienny>
+    </dolegliwosci>
+  
+    <opis>Pacjentka nie zgłasza żadnych uwag poza opisanymi powyżej. Ciśnienie w normie. Zlecono badania kontrolne krwi (TSH, fT4, aTPO).</opis>
+    
+</badanie>

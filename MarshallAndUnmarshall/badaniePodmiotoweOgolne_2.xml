@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE badanie>
+<badanie oddzial="Oddział dermatologii" ksiega_gl="R15-034" ksiega_oddzialu="Der-01/R15">
+    
+    <pacjent pesel="91012104887">
+        <nazwisko>Mazurek</nazwisko>
+        <imie>Adam</imie>
+        <plec>M</plec>
+    </pacjent>
+   
+   	<wywiad_wstepny>
+   		<gl_skargi>swędzenie skóry na całym ciele, zaczerwienienia, czasami lekka opuchlizna (rano)</gl_skargi>
+    	<przebyte_choroby>ospa, różyczka</przebyte_choroby>
+   	</wywiad_wstepny>
+    
+    <leki>
+        <lek nazwa_leku="Kortyzol">
+            <okres_poczatek>2015-03-12</okres_poczatek>
+			<okres_koniec>2015-03-27</okres_koniec>
+            <uwagi>dawka wzrastająca stopniowo od 10mg do 80mg (podwajana co 4 dni)</uwagi>
+        </lek>
+        <lek nazwa_leku="Cutivate">
+            <okres_poczatek>2015-03-12</okres_poczatek>
+            <uwagi>maść stosowana punktowo na zmiany alergiczne, nadal w użyciu</uwagi>
+        </lek>
+    </leki>
+  
+    <opis>Zmiany skórne (stan zapalny) na skórze pacjenta - głównie przedramiona oraz wyższe partie pleców. Zaczerwieniona skóra, swędzenie. Ogólne samopoczucie dobre, ciśnienie w normie.</opis>
+    
+</badanie>

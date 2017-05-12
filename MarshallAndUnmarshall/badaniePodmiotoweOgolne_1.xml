@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE badanie>
+
+<badanie oddzial="Oddział okulistyczny" ksiega_gl="R17-002" ksiega_oddzialu="Oku-11/R17">
+    
+    <pacjent pesel="75060605612">
+        <nazwisko>Jonderko</nazwisko>
+        <imie>Magdalena</imie>
+		<imie>Maria</imie>
+		<imie>Anna</imie>
+        <plec>K</plec>
+    </pacjent>
+   
+   	<wywiad_wstepny>
+   		<gl_skargi>Częste bóle głowy w okolicach skroni, ciemne plamki w polu widzenie</gl_skargi>
+   	</wywiad_wstepny>
+    
+    <leki>
+        <lek nazwa_leku="Okugit">
+            <okres_poczatek>2016-03-01</okres_poczatek>
+            <uwagi>1 tab. raz dziennie, rano, po śniadaniu; suplement diety z witaminą D</uwagi>
+        </lek>
+		<lek nazwa_leku="Witamin Mix">
+			<dawka>30.0</dawka>
+			<okres_poczatek>2013-02-01</okres_poczatek>
+            <uwagi>dawka - jedna tabletka, raz dziennie, wieczorem, brany aktualnie</uwagi>
+        </lek>
+        <lek nazwa_leku="Suplmed">
+            <uwagi>pacjentka nie pamięta okresu przyjmowania leku, jednak był to okres krótszy niż 2tyg.</uwagi>
+        </lek>
+    </leki>
+    
+    <dolegliwosci>
+    	<uklad_krazenia>wysokie ciśnienie</uklad_krazenia>
+    </dolegliwosci>
+  
+    <opis>Siatkówka dobrze przylegająca do dna oka. Brak wady wzroku. Oko Lewe: wysokie ciśnienie, stan lekko zapalny. Przepisano maść Lowpres (na noc) w celu obniżenia ciśnienia. Wizyta kontrolna za mesiąc.</opis>
+    
+</badanie>
